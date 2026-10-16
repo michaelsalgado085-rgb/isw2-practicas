@@ -1,23 +1,18 @@
-Nombre: Michael Andre Salgado Leiva
-Carrera:Ingenieria en informatica 
+# ISW2 - Prácticas
 
-Indice practicas
-Practica 1
+**Nombre:** Michael Andre Salgado Leiva
+**Carrera:** Ingeniería en Informática
 
-Practica 2
+## Índice de prácticas
 
-Practica 3
-
-Practica 4
-
-Practica 5
-
-Practica 6
-
-Practica 7
-
-Practica 8
-
-Practica 9
+- [Práctica 1](practica-1/limpieza.md)
+- Práctica 2
+- Práctica 3
+- Práctica 4
+- Práctica 5
+- Práctica 6
+- Práctica 7
+- Práctica 8
+- Práctica 9
 
 
