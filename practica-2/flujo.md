@@ -22,3 +22,17 @@ Hay menos merges grandes y menos conflictos, pero necesita buenas pruebas
 
 automáticas para no romper main.
 
+
+
+
+
+\## Mi elección para una app web
+
+Usaría Trunk-Based. Una app web se despliega seguido, y ramas cortas con
+
+integración continua permiten entregar cambios pequeños y rápidos con menos
+
+conflictos. GitFlow tiene más sentido en software con versiones fijas,
+
+como una app que se lanza por versiones numeradas.
+
