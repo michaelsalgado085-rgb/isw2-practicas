@@ -22,7 +22,11 @@ Hay menos merges grandes y menos conflictos, pero necesita buenas pruebas
 
 automáticas para no romper main.
 
+Los feature flags permiten activar o desactivar funcionalidades mediante
 
+configuración, y facilitan la integración frecuente sin exponer cambios
+
+incompletos a los usuarios.
 
 
 
