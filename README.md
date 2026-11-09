@@ -9,7 +9,7 @@
 - [Práctica 1](practica-1/limpieza.md)
 - [Práctica 2](practica-2/flujo.md)
 - [Práctica 3](practica-3/notas.md)
-- Práctica 4
+- [Práctica 4](practica-4/evidencia.md)
 - Práctica 5
 - Práctica 6
 - Práctica 7
