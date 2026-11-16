@@ -10,7 +10,7 @@
 - [Práctica 2](practica-2/flujo.md)
 - [Práctica 3](practica-3/notas.md)
 - [Práctica 4](practica-4/evidencia.md)
-- Práctica 5
+- [Práctica 5](practica-5/diagnostico.md)
 - Práctica 6
 - Práctica 7
 - Práctica 8
