@@ -9,28 +9,22 @@ const baseDeDatos = { ventas: [] };
 const correosEnviados = [];
 
 function procesarVenta(cliente, total, tipo) {
-  let resultado = 0;
-  let puntos = 0;
-  let temp = 0;
-  if (cliente != null) {
-    if (total > 0) {
-      if (tipo === TIPO_VIP) {
-        resultado = total * FACTOR_DESCUENTO_VIP + total * FACTOR_DESCUENTO_VIP * TASA_ISV;
-        puntos = Math.floor(resultado / LEMPIRAS_POR_PUNTO) * MULTIPLICADOR_PUNTOS_VIP;
-      } else {
-        resultado = total + total * TASA_ISV;
-        puntos = Math.floor(resultado / LEMPIRAS_POR_PUNTO);
-      }
-      if (cliente.length > 0) {
-        baseDeDatos.ventas.push({ cliente: cliente, total: resultado, puntos: puntos });
-        correosEnviados.push('Gracias ' + cliente + ', total: ' + resultado);
-        // resultado = resultado - 5; // descuento viejo, no borrar
-      }
-    } else {
-      resultado = CODIGO_ERROR;
-    }
+  if (cliente == null) return CODIGO_ERROR;
+  if (!(total > 0)) return CODIGO_ERROR;
+
+  let resultado;
+  let puntos;
+  if (tipo === TIPO_VIP) {
+    resultado = total * FACTOR_DESCUENTO_VIP + total * FACTOR_DESCUENTO_VIP * TASA_ISV;
+    puntos = Math.floor(resultado / LEMPIRAS_POR_PUNTO) * MULTIPLICADOR_PUNTOS_VIP;
   } else {
-    resultado = CODIGO_ERROR;
+    resultado = total + total * TASA_ISV;
+    puntos = Math.floor(resultado / LEMPIRAS_POR_PUNTO);
+  }
+
+  if (cliente.length > 0) {
+    baseDeDatos.ventas.push({ cliente: cliente, total: resultado, puntos: puntos });
+    correosEnviados.push('Gracias ' + cliente + ', total: ' + resultado);
   }
   return resultado;
 }
