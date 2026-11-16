@@ -22,7 +22,15 @@ function calcularPuntos(totalFinal, tipo) {
   return tipo === TIPO_VIP ? puntos * MULTIPLICADOR_PUNTOS_VIP : puntos;
 }
 
-function procesarVenta(cliente, total, tipo) {
+function registrarVenta(repositorio, cliente, total, puntos) {
+  repositorio.ventas.push({ cliente: cliente, total: total, puntos: puntos });
+}
+
+function notificarCliente(notificador, cliente, total) {
+  notificador.push('Gracias ' + cliente + ', total: ' + total);
+}
+
+function procesarVenta(cliente, total, tipo, repositorio = baseDeDatos, notificador = correosEnviados) {
   if (cliente == null) return CODIGO_ERROR;
   if (!(total > 0)) return CODIGO_ERROR;
 
@@ -30,8 +38,8 @@ function procesarVenta(cliente, total, tipo) {
   const puntos = calcularPuntos(totalFinal, tipo);
 
   if (cliente.length > 0) {
-    baseDeDatos.ventas.push({ cliente: cliente, total: totalFinal, puntos: puntos });
-    correosEnviados.push('Gracias ' + cliente + ', total: ' + totalFinal);
+    registrarVenta(repositorio, cliente, totalFinal, puntos);
+    notificarCliente(notificador, cliente, totalFinal);
   }
   return totalFinal;
 }
