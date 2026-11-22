@@ -4,6 +4,8 @@
 
 **Carrera:** Ingeniería en Informática
 
+**Token de propiedad:** LEARN-CAP-F805AE8B
+
 ## Índice de prácticas
 
 - [Práctica 1](practica-1/limpieza.md)
